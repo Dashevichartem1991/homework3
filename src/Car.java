@@ -1,67 +1,77 @@
-public class Car<T1, T2, T3, T4,T5, T6> {
+import java.util.Arrays;
 
-    private T1 color;
-    private T2 model;
-    private T3 yearOfIssue;
-    private T4 wheelSize;
-    private T5 engineCapacity;
-    private T6 options;
+public class Car {
 
+    private Integer year;
+    private CarColor carColor;
+    private CarModel carModel;
+    private CarEngineCapacity carEngineCapacity;
+    private CarWheelSize carWheelSize;
+    private CarOptions carOptions;
 
-    public Car(T1 color, T2 model, T3 yearOfIssue, T4 wheelSize, T5 engineCapacity, T6 options) {
-        this.color = color;
-        this.model = model;
-        this.yearOfIssue = yearOfIssue;
-        this.wheelSize = wheelSize;
-        this.engineCapacity = engineCapacity;
-        this.options = options;
+    public Car(Integer year, CarColor carColor, CarModel carModel, CarEngineCapacity carEngineCapacity, CarWheelSize carWheelSize) {
+        this.year = year;
+        this.carColor = carColor;
+        this.carModel = carModel;
+        this.carEngineCapacity = carEngineCapacity;
+        this.carWheelSize = carWheelSize;
+
     }
 
-    public T1 getColor() {
-        return color;
+    public Car(Integer year, CarColor carColor, CarModel carModel, CarEngineCapacity carEngineCapacity, CarWheelSize carWheelSize, CarOptions carOptions) {
+        this.year = year;
+        this.carColor = carColor;
+        this.carModel = carModel;
+        this.carEngineCapacity = carEngineCapacity;
+        this.carWheelSize = carWheelSize;
+        this.carOptions = carOptions;
     }
 
-    public T2 getModel() {
-        return model;
+    public Integer getYear() {
+        return year;
     }
 
-    public T3 getYearOfIssue() {
-        return yearOfIssue;
+    public CarColor getCarColor() {
+        return carColor;
     }
 
-    public T4 getWheelSize() {
-        return wheelSize;
+    public CarModel getCarModel() {
+        return carModel;
     }
 
-    public T5 getEngineCapacity() {
-        return engineCapacity;
+    public CarEngineCapacity getCarEngineCapacity() {
+        return carEngineCapacity;
     }
 
-    public T6 getOptions() {
-        return options;
+    public CarWheelSize getCarWheelSize() {
+        return carWheelSize;
     }
 
-    public void setColor(T1 color) {
-        this.color = color;
+    public CarOptions getCarOptions() {
+        return carOptions;
     }
 
-    public void setWheelSize(T4 wheelSize) {
-        this.wheelSize = wheelSize;
+    public void setCarColor(CarColor carColor) {
+        this.carColor = carColor;
     }
 
-    public void setOptions(T6 options) {
-        this.options = options;
+    public void setCarWheelSize(CarWheelSize carWheelSize) {
+        this.carWheelSize = carWheelSize;
+    }
+
+    public void setCarOptions(CarOptions carOptions) {
+        this.carOptions = carOptions;
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "color=" + color +
-                ", model=" + model +
-                ", yearOfIssue=" + yearOfIssue +
-                ", wheelSize=" + wheelSize +
-                ", engineCapacity=" + engineCapacity +
-                ", options=" + options +
+                "year=" + year +
+                ", carColor=" + carColor +
+                ", carModel=" + carModel +
+                ", carEngineCapacity=" + carEngineCapacity +
+                ", carWheelSize=" + carWheelSize +
+                ", carOptions=" + carOptions +
                 '}';
     }
 }

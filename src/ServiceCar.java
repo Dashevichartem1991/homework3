@@ -1,16 +1,32 @@
 public class ServiceCar {
 
-    public static void main(String[] args) {
 
-        Car<String, String, Integer, Float, Float, String> firstCar = new Car<>("Red", "Emgrand7", 2020,16.0F,1.6F, "condition");
-        System.out.println(firstCar.toString());
+    public static void changeColor(Car newCar, String newColor) {
+        for (CarColor col : CarColor.values()) {
+            if (col.name().equals(newColor.toUpperCase())) {
 
-        firstCar.setColor("Blue");
-        firstCar.setWheelSize(22.0F);
-        firstCar.setOptions("Climat Control");
-
-        System.out.println(firstCar.toString());
-
-
+                newCar.setCarColor(col);
+            }
+        }
     }
+
+    public static void changeWheelSize(Car newCar, String newSize) {
+        for (CarWheelSize whe : CarWheelSize.values()) {
+            if (whe.name().equals(newSize.toUpperCase())) {
+
+                newCar.setCarWheelSize(whe);
+            }
+        }
+    }
+
+    public static void changeCarOptions(Car newCar, String newOptions) {
+        for (CarOptions opt : CarOptions.values()) {
+            if (opt.name().equals(newOptions.toUpperCase())) {
+
+                newCar.setCarOptions(opt);
+            }
+        }
+    }
+
+
 }
