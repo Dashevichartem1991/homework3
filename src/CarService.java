@@ -1,5 +1,4 @@
-public class ServiceCar {
-
+public interface CarService {
 
     public static void changeColor(Car newCar, String newColor) {
         for (CarColor col : CarColor.values()) {
@@ -27,6 +26,4 @@ public class ServiceCar {
             }
         }
     }
-
-
 }
